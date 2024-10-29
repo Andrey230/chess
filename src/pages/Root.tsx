@@ -235,6 +235,7 @@ export default function Root(){
             setMoves([]);
             setGame(new Chess());
             setShowVariantInput(false);
+            setMoveCounter(0);
         }
     }
 
