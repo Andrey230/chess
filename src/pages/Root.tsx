@@ -269,6 +269,7 @@ export default function Root(){
             setMoveCounter(newMoves.length);
             setShowPgnInput(false);
             setPgn('');
+            setShowVariantInput(true);
         }catch (e){
             console.log(e.message);
         }
