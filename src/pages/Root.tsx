@@ -326,8 +326,8 @@ export default function Root(){
             </button>
             <div className="min-h-lvh bg-base-300 pb-20">
                 {randomVariant ? <RandomVariant variant={randomVariant} /> : ''}
-                <div className="flex justify-center pt-28 gap-5 items-start">
-                    <div className="p-5 shadow-xl bg-base-100 rounded-lg w-80">
+                <div className="p-5 pg:p-0 flex flex-col lg:flex-row justify-center gap-5 pt-28 items-start">
+                    <div className="p-5 shadow-xl bg-base-100 rounded-lg h-72 w-full overflow-y-auto lg:w-1/3 lg:h-[500px]">
 
                             <Outlet context={{setShowChessboardButtons, setVariants, variants, setRepositoryId, setToken, setRandom}}/>
                         {/*<h3 className="text-xl font-bold mb-5">Variations</h3>*/}
@@ -344,7 +344,7 @@ export default function Root(){
                         {/*    })}*/}
                         {/*</div>*/}
                     </div>
-                    <div>
+                    <div className="w-full lg:w-1/3">
                         <div id="chess_board" className={`p-5 shadow-xl bg-base-100 rounded-lg ${chessboardBg}`}>
                             <Chessboard
                                 position={game.fen()}
@@ -363,7 +363,7 @@ export default function Root(){
                             </button>
                         </div>
                     </div>
-                    <div className="p-5 shadow-xl bg-base-100 rounded-lg w-96">
+                    <div className="p-5 shadow-xl bg-base-100 rounded-lg w-full lg:w-1/3 min-h-40 lg:min-h-[500px]">
 
                         {showChessboardButtons ? <>
                         <div className="flex gap-2">
